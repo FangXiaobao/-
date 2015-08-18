@@ -76,6 +76,24 @@ status LinkCreate(LinkList head,int n)               //创建链表 头插法
     return TRUE;
 }
 
+status LinkCreate_end(LinkList head,int n )         //创建链表 尾插法
+{
+    LinkList p;
+    p = head;
+    p->next = NULL;
+    LinkList s;
+    for(int k =1; k < n;k++)
+    {
+        s =(LinkList)malloc(sizeof(Node));
+        s->data = rand()%100;
+        p->next = s;
+        p = s;
+    }
+    s->next = NULL;
+    return TRUE;
+}
+
+
 
 status LinkShow(LinkList head)              //输出链表
 {
