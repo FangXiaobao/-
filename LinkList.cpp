@@ -60,6 +60,22 @@ status LinkDelete(LinkList head,int i)              //删除第i个结点后面�
     free(q);
     return TRUE;
 }
+
+
+status Link_all_delete(LinkList head)               //单链表的整表删除
+{
+    LinkList p = head;
+    LinkList q;
+    while(p)
+    {
+        q = p->next;
+        free(p);
+        p = q;
+    }
+    return TRUE;
+}
+
+
 status LinkCreate(LinkList head,int n)               //创建链表 头插法
 {
     head->next = NULL;
