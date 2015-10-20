@@ -15,6 +15,7 @@ struct Node
     struct Node* next;
 };
 
+
 typedef struct Node* LinkList;          //指向结点的指针变量 LinkList
 status LinkGet(LinkList head,int i,ElemType* e)             //用e返回第i个元素
 {
